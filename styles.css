@@ -1,0 +1,206 @@
+/* Main Stylesheet for Errand Ke */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: #0d6efd;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+/* Menu links */
+.nav-desktop .dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-desktop .dropdown-menu a:hover {
+  background: #f2f2f2;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+.main {
+  text-align: center;
+}
+
+.main h1 {
+  margin-bottom: 1rem;
+}
+
+.main p {
+  max-width: 600px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.mobile-menu {
+  display: none;
+  background: #000c66;
+  padding: 1rem;
+}
+
+.mobile-menu a {
+  display: block;
+  color: white;
+  padding: 0.5rem 0;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #020024, #090979, #000c66);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 18px 0 18px 0;
+}
+
+.nav-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-desktop a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.nav-desktop .left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-desktop input {
+  padding: 0.3rem 0.6rem;
+  margin-right: 1rem;
+}
+
+.nav-mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qr-section {
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.qr-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.qr-placeholder {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+.signin {
+  color: white;
+  text-decoration: none;
+}
+.signup {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+}
