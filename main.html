@@ -12,20 +12,18 @@
         <!-- Desktop navbar -->
         <div class="nav-desktop">
           <div class="left">
-            <span class="logo"></span>
             <div class="dropdown">
-            <a href="#" class="dropdown-label">How to</a>
-            <div class="dropdown-menu">
-              <a href="#">Place an Order</a>
-              <a href="#">Become a Courier</a>
+              <a href="#" class="dropdown-label">How to</a>
+              <div class="dropdown-menu">
+                <a href="Order.html">Place an Order</a>
+                <a href="Courier.html">Become a Courier</a>
+              </div>
             </div>
-          </div>
             <a href="#">Help Centre</a>
             <a href="#">Privacy Centre</a>
           </div>
-
+          <span class="logo"><a href="main.html">Errand Ke</a></span>
           <div class="right">
-            <input type="text" placeholder="Search" />
             <a href="#">Sign in</a>
             <button class="signup">Sign up</button>
           </div>
@@ -34,8 +32,22 @@
         <!-- Mobile navbar -->
         <div class="nav-mobile">
           <button class="hamburger">☰</button>
-          <span class="logo"></span>
-          <a href="#" class="signin">Sign in</a>
+          <span class="logo"><a href="main.html">Errand Ke</a></span>
+          <a href="#" class="signup">Sign up</a>
+        </div>
+        <!-- Mobile dropdown menu -->
+        <div class="mobile-menu">
+          <div class="mobile-dropdown">
+            <button class="mobile-dropdown-label">How to ▾</button>
+            <div class="mobile-dropdown-menu">
+              <a href="Order.html">Place an Order</a>
+              <a href="Courier.html">Become a Courier</a>
+            </div>
+          </div>
+
+          <a href="#">Help Centre</a>
+          <a href="#">Privacy Centre</a>
+          <a href="#">Sign in</a>
         </div>
       </nav>
 
@@ -64,6 +76,23 @@
         </li>
       </ul>
     </section>
+    <section class="services-slider">
+      <h1>Our Services</h1>
+      <p>Errand Ke offers a wide range of services to meet your needs.</p>
+      <div class="slider-track">
+        <!-- Original slides -->
+        <div class="slide">🛒 Groceries</div>
+        <div class="slide">📄 Document Retrieval</div>
+        <div class="slide">💻 Electronics</div>
+        <div class="slide">🧰 Equipment</div>
+
+        <!-- Duplicated slides for seamless looping -->
+        <div class="slide">🛒 Groceries</div>
+        <div class="slide">📄 Document Retrieval</div>
+        <div class="slide">💻 Electronics</div>
+        <div class="slide">🧰 Equipment</div>
+      </div>
+    </section>
     <section class="qr-section">
       <h2>Get the Errand Ke App</h2>
       <p>
@@ -77,20 +106,29 @@
         </div>
 
         <div class="qr-card">
-          <img src="imgs/errandske-qr.png" alt="Android QR Code">
+          <img src="imgs/errandske-qr.png" alt="Android QR Code" />
           <p>For Android</p>
         </div>
       </div>
     </section>
     <section class="contact-section">
       <h2>Contact Us</h2>
-      <p>Have questions or feedback? Reach out to us using the form below. <br> Or call us at +254 700 000 000</p>
+      <p>
+        Have questions or feedback? Reach out to us using the form below. <br />
+        Or call us at +254 700 000 000
+      </p>
       <form class="contact-form">
-        <input type="text" placeholder="Your Name" required /><br>
-        <input type="email" placeholder="Your Email" required /><br>
-        <textarea spellcheck="true" placeholder="Your Message" required></textarea><br>
+        <input type="text" placeholder="Your Name" required /><br />
+        <input type="email" placeholder="Your Email" required /><br />
+        <textarea
+          spellcheck="true"
+          placeholder="Your Message"
+          required
+        ></textarea
+        ><br />
         <button type="submit">Send Message</button>
       </form>
+    </section>
     <script src="acts.js"></script>
     <footer>
       <p>&copy; 2026 Errand Ke. All rights reserved.</p>

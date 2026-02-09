@@ -1,4 +1,9 @@
 /* Main Stylesheet for Errand Ke */
+
+/* =========================
+   Base styles
+========================= */
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +12,7 @@ body {
 }
 
 header {
-  background: #0d6efd;
+  background: #0443a1;
   color: #fff;
   padding: 1.5rem;
   text-align: center;
@@ -26,14 +31,17 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
-/* Dropdown container */
+
+/* =========================
+   Desktop dropdown (ONLY desktop)
+========================= */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
 /* Dropdown menu */
-.dropdown-menu {
+.nav-desktop .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -42,7 +50,6 @@ footer {
   border-radius: 8px;
   padding: 0.5rem 0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
@@ -64,60 +71,15 @@ footer {
 }
 
 /* Show menu on hover */
-.dropdown:hover .dropdown-menu {
+.nav-desktop.dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.feature {
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-}
-.hamburger {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-}
-.main {
-  text-align: center;
-}
-
-.main h1 {
-  margin-bottom: 1rem;
-}
-
-.main p {
-  max-width: 600px;
-  margin: auto;
-}
-
-.logo {
-  font-size: 1.4rem;
-  margin-right: 1rem;
-}
-.mobile-menu {
-  display: none;
-  background: #000c66;
-  padding: 1rem;
-}
-
-.mobile-menu a {
-  display: block;
-  color: white;
-  padding: 0.5rem 0;
-}
-
+/* =========================
+   Navbar
+========================= */
 .navbar {
   background: linear-gradient(90deg, #020024, #090979, #000c66);
   color: white;
@@ -143,19 +105,139 @@ footer {
   align-items: center;
 }
 
-.nav-desktop input {
-  padding: 0.3rem 0.6rem;
-  margin-right: 1rem;
+.logo {
+  font-size: 1.4rem;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
 }
-
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.signup {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+/* =========================
+   Mobile navbar
+========================= */
 .nav-mobile {
   display: none;
   justify-content: space-between;
   align-items: center;
 }
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+.nav-mobile .signup {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+/* =========================
+   Mobile menu (dropdown panel)
+========================= */
+.mobile-menu {
+  display: none;
+  background: linear-gradient(180deg, #020024, #090979, #000c66);
+  padding: 1.25rem;
+  border-radius: 16px;
+}
+.mobile-menu.open {
+  display: block;
+}
+.mobile-menu a,
+.mobile-dropdown-label {
+  display: block;
+  width: 100%;
+  color: white;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-align: left;
+}
+.mobile-menu a:hover {
+  background: #090979;
+}
+.mobile-dropdown-menu {
+  display: none;
+  padding-left: 1rem;
+}
 
+.mobile-dropdown.open .mobile-dropdown-menu {
+  display: block;
+}
+
+/* =========================
+   Main Content Styles
+========================= */
+.main {
+  text-align: center;
+}
+.main p {
+  max-width: 600px;
+  margin: auto;
+}
+/* =========================
+   Services Slider
+========================= */
+.services-slider {
+  overflow: hidden;
+  background: #0f172a;
+  padding: 40px 0;
+  color: #ddd;
+  text-align: center;
+  max-width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+.slider-track:hover {
+  animation-play-state: paused;
+}
+.slide {
+  min-width: 250px;
+  margin: 0 20px;
+  padding: 30px;
+  background: linear-gradient(90deg, #020024, #090979, #000c66);
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* =========================
+   QR Code Section
+========================= */
 .qr-section {
-  background: #f8f9fa;
+  background: url(imgs/qr-background.png) no-repeat center center/cover;
   text-align: center;
 }
 
@@ -184,17 +266,30 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+/* =========================
+   Features Section
+========================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+/* =========================
+   Misc Styles
+========================= */
 .signin {
   color: white;
   text-decoration: none;
 }
-.signup {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-}
+
 @media (max-width: 768px) {
   .nav-desktop {
     display: none;
@@ -202,5 +297,9 @@ footer {
 
   .nav-mobile {
     display: flex;
+  }
+  .slide {
+    min-width: 200px;
+    font-size: 1rem;
   }
 }

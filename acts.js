@@ -1,9 +1,16 @@
-<script>
-  const btn = document.querySelector('.hamburger');
-  const menu = document.getElementById('menu');
+const btn = document.querySelector(".hamburger");
+const menu = document.querySelector(".mobile-menu");
 
-  btn.onclick = () => {
-    menu.style.display =
-      menu.style.display === 'block' ? 'none' : 'block';
-  };
-</script>
+btn.addEventListener("click", () => {
+  menu.classList.toggle("open");
+});
+
+const track = document.querySelector(".slider-track");
+
+track.addEventListener("mouseenter", () => {
+  track.style.animationPlayState = "paused";
+});
+
+track.addEventListener("mouseleave", () => {
+  track.style.animationPlayState = "running";
+});
