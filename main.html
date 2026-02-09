@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Errand Ke</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -24,7 +31,6 @@
           </div>
           <span class="logo"><a href="main.html">Errand Ke</a></span>
           <div class="right">
-            <a href="#">Sign in</a>
             <button class="signup">Sign up</button>
           </div>
         </div>
@@ -54,27 +60,78 @@
       <h1>Versatile Errand running</h1>
       <p>Reliable, fast, and tailored for your needs</p>
     </header>
-    <section class="main">
-      <h1>Deliver Anything, Anywhere</h1>
-      <p>
-        Whether it's groceries, packages, or important documents, Errand Ke
-        ensures your items reach their destination safely and on time.
-      </p>
-      <h2>Why Choose Errand Ke?</h2>
-      <ul>
-        <li>
-          <strong>Speedy Deliveries:</strong> We prioritize quick turnaround
-          times to meet your urgent needs.
-        </li>
-        <li>
-          <strong>Reliable Service:</strong> Our trusted couriers handle your
-          errands with care and professionalism.
-        </li>
-        <li>
-          <strong>Customizable Options:</strong> Tailor your delivery experience
-          with our flexible service plans.
-        </li>
-      </ul>
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- HEADER -->
+        <div class="hero-header">
+          <h1>Errands made effortless</h1>
+          <p>
+            Pick your delivery style. Fast, flexible, and always dependable —
+            get errands done your way.
+          </p>
+
+          <div class="hero-tabs">
+            <button class="tab active">Within your area</button>
+            <button class="tab">Mid distance</button>
+            <button class="tab">Long distance</button>
+          </div>
+        </div>
+
+        <!-- PANELS -->
+        <div class="hero-panels">
+          <!-- PANEL 1 -->
+          <div class="tab-panel active">
+            <div class="feature-card">
+              <div class="icon">💬</div>
+              <h3>Groceries to your door</h3>
+              <p>
+                Order groceries and have them delivered quickly, right when you
+                need them.
+              </p>
+              <div class="input-placeholder"></div>
+            </div>
+
+            <div class="hero-image">
+              <img src="imgs/on-foot.png" alt="On foot delivery" />
+            </div>
+          </div>
+
+          <!-- PANEL 2 -->
+          <div class="tab-panel">
+            <div class="feature-card">
+              <div class="icon">🏍️</div>
+              <h3>Fast mid-distance delivery</h3>
+              <p>
+                Ideal for errands across town with reliable motorbike delivery.
+              </p>
+              <div class="input-placeholder"></div>
+            </div>
+
+            <div class="hero-image">
+              <img src="imgs/on-bike.png" alt="Motorbike delivery" />
+            </div>
+          </div>
+
+          <!-- PANEL 3 -->
+          <div class="tab-panel">
+            <div class="feature-card">
+              <div class="icon">🚚</div>
+              <h3>Long distance errands</h3>
+              <p>
+                Send and receive items over longer distances with confidence.
+              </p>
+              <div class="input-placeholder"></div>
+            </div>
+
+            <div class="hero-image">
+              <img
+                src="imgs/on-long-distances.png"
+                alt="Long distance delivery"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="services-slider">
       <h1>Our Services</h1>
@@ -111,27 +168,66 @@
         </div>
       </div>
     </section>
-    <section class="contact-section">
-      <h2>Contact Us</h2>
-      <p>
-        Have questions or feedback? Reach out to us using the form below. <br />
-        Or call us at +254 700 000 000
-      </p>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required /><br />
-        <input type="email" placeholder="Your Email" required /><br />
-        <textarea
-          spellcheck="true"
-          placeholder="Your Message"
-          required
-        ></textarea
-        ><br />
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-    <script src="acts.js"></script>
-    <footer>
-      <p>&copy; 2026 Errand Ke. All rights reserved.</p>
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- BRAND -->
+        <div class="footer-brand">
+          <div class="logo2">
+            <span class="logo2-icon">✦</span>
+            <span class="logo-text">ERRANDSKE</span>
+          </div>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-links">
+          <div class="link-column">
+            <h4>Services</h4>
+            <a href="#">Groceries</a>
+            <a href="#">Parcels</a>
+            <a href="#">Documents</a>
+            <a href="#">Food</a>
+            <a href="#">Other</a>
+          </div>
+
+          <div class="link-column">
+            <h4>Support</h4>
+            <a href="#">Help</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+            <a href="#">Guide</a>
+          </div>
+
+          <div class="link-column">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Press</a>
+            <a href="#">Blog</a>
+          </div>
+
+          <div class="link-column">
+            <h4>Legal</h4>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Policy</a>
+            <a href="#">Access</a>
+          </div>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-square-linkedin"></i></a>
+      </div>
+      <!-- DIVIDER -->
+      <div class="footer-divider"></div>
+
+      <!-- BOTTOM -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Errand Ke. All rights reserved.</p>
+      </div>
     </footer>
+    <script src="acts.js"></script>
   </body>
 </html>

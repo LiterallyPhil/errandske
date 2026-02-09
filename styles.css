@@ -24,12 +24,94 @@ section {
   margin: auto;
 }
 
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+.footer {
+  background: #0f2557;
+  color: #ffffff;
+  padding: 60px 80px 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  max-width: 260px;
+}
+.logo2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo2-icon {
+  background: #ffffff;
+  color: #0f2557;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.link-column h4 {
+  margin-bottom: 14px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.link-column a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.link-column a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-divider {
+  margin: 40px 0 20px;
+  height: 2px;
+  background: #1da1f2;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  align-self: flex-start;
+}
+
+.socials a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.socials a:hover {
+  opacity: 1;
 }
 
 /* =========================
@@ -185,12 +267,149 @@ footer {
 /* =========================
    Main Content Styles
 ========================= */
-.main {
-  text-align: center;
+.hero {
+  background: #0f2557;
+  color: #ffffff;
+  padding: 100px 80px;
 }
-.main p {
-  max-width: 600px;
-  margin: auto;
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.hero-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.hero-header h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-header p {
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+/* TABS */
+.hero-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-tabs .tab {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  padding: 14px 0;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.hero-tabs .tab.active {
+  color: #ffffff;
+}
+
+.hero-tabs .tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+}
+
+/* PANELS */
+.hero-panels {
+  position: relative;
+  min-height: 420px;
+}
+.tab-panel .hero-image {
+  transition-delay: 0.1s;
+}
+.tab-panel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+
+  opacity: 0;
+  transform: translateX(40px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tab-panel.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* CARD */
+.feature-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 36px;
+  max-width: 420px;
+}
+
+.feature-card .icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.input-placeholder {
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* CTA */
+.cta {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
 }
 /* =========================
    Services Slider
